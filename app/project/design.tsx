@@ -35,7 +35,7 @@ const Design :  React.FC<designProps> = ({variant}) => {
   useEffect(() => {
     async function getDribbble() {
       const dribbble = await fetch(
-        'https://api.dribbble.com/v2/user/shots?access_token=f907fdc0d021822663c504699ef1141a9ed4acc2715c51b3817f2a7aa430bb4f'
+        ''
       )
 
       return dribbble.json()

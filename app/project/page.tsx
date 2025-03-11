@@ -10,11 +10,11 @@ import {
 } from "@/components/ui/tabs"
 import projectLists from "../../data/project.json";
 import Dev from './dev';
-import Design from "./design";
+// import Design from "./design";
 
 const Project = () => {
   useEffect(() => {
-    document.title = "Projects | Elvira Firmansyah"
+    document.title = "Projects | Romadhon Aji S"
   }, [])
   const sourceCategories = ["all", "dev", "design"]
   return (
@@ -40,13 +40,13 @@ const Project = () => {
                   <TabsContent value="all">
                     <Dev />
                     <hr className="bg-[#EEF1F6] border-[0.5] border-[#EEF1F6] dark:border-navdark dark:bg-navdark mt-10 mb-6" />
-                    <Design variant="all"/>
+                    {/* <Design variant="all"/> */}
                   </TabsContent>
                   <TabsContent value="dev">
                     <Dev />
                   </TabsContent>
                   <TabsContent value="design">
-                    <Design variant="design" />
+                    {/* <Design variant="design" /> */}
                   </TabsContent>
                 </div>
               </Tabs>

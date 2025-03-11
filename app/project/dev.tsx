@@ -32,7 +32,7 @@ const Dev = () => {
   useEffect(() => {
     async function getStars() {
       const repos = await fetch(
-        'https://api.github.com/users/elvirafimansyah/repos'
+        'https://api.github.com/users/ryuzein/repos'
       )
 
       return repos.json()
@@ -52,7 +52,7 @@ const Dev = () => {
     <>
       <div className="mb-5">
         <h4 className="text-lg font-bold tracking-desc leading-tight">Dev Projects</h4>
-        <span className="text-desc font-medium tracking-desc leading-[1]">A few of my dev projects. View them all on <a href="https://github.com/elvirafimansyah" target="_blank" className="hover:underline decoration-primary decoration-2 underline-offset-[3px] text-foreground">Github</a></span>
+        <span className="text-desc font-medium tracking-desc leading-[1]">A few of my dev projects. View them all on <a href="https://github.com/ryuzein" target="_blank" className="hover:underline decoration-primary decoration-2 underline-offset-[3px] text-foreground">Github</a></span>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {loading ?
@@ -82,7 +82,7 @@ const Dev = () => {
                 <div className="flex items-center py-2">
                   <>
                     <a
-                      href={`https://github.com/elvirafimansyah/${project.slug}/stargazers`}
+                      href={`https://github.com/ryuzein/${project.slug}/stargazers`}
                       target="blank"
                     >
                       <Badge variant="warning" className="flex space-x-2">
@@ -97,7 +97,7 @@ const Dev = () => {
                   </>
                 </div>
                 <div className="pt-2 pb-1 flex flex-row space-x-2 items-center">
-                  <a href={`https://github.com/elvirafimansyah/${project.slug}`} target="_blank">
+                  <a href={`https://github.com/ryuzein/${project.slug}`} target="_blank">
                     <Button variant="detail_outline" className="hover:bg-card2 dark:hover:bg-hoversoft2"><i className="fa-brands fa-github"></i>&nbsp; Github</Button>
                   </a>
                   <a href={project.url} target="_blank">

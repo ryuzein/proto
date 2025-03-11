@@ -1,96 +1,31 @@
 [
   {
-    "name": "Covore",
-    "slug": "covore",
-    "tagline": "📊 Covore is covid tracker app that built with Next.js & Shadcn UI",
-    "url": "https://covore.vercel.app/",
+    "name": "Pandawa Eazy Tools",
+    "slug": "pandawa-eazy-tools",
+    "tagline": "📊 Pandawa Eazy Tools Is A Repository Made For We Can Get Some Important Content We Need For Free And Open Source.",
+    "url": "#",
     "category": "web development",
-    "type": "next js",
-    "img": "/assets/img/covore.png"
+    "type": "Tools",
+    "img": "https://camo.githubusercontent.com/f78e589b57aa116190c13182ebe9d4ef822b86f4a8159d126e4966212f5349b4/68747470733a2f2f692e6962622e636f2f46714c6e39516d2f50414e444157412e706e67"
   },
   {
-    "name": "Emortfy",
-    "slug": "emortfy",
+    "name": "Raz TV",
+    "slug": "raztv",
     "tab": "Dev",
-    "tagline": "📈 A list of spotify chart, such as top artists, top albums, etc",
-    "url": "http://emortfy.vercel.app/",
+    "tagline": "📈 RazTV offers a bunch of free movies with just a click of button! Watch your favorite movies anytime you want to watch them with just a quick registration.",
+    "url": "#",
     "category": "web development",
     "type": "React JS",
-    "img": "/assets/img/emortfy.png"
+    "img": "https://user-images.githubusercontent.com/60551839/165899734-9b01ca59-a41b-4aca-a210-ff4e197b2488.png"
   },
   {
-    "name": "Indonesia Emas 2045",
-    "slug": "indonesiaemas",
+    "name": "VAnime Stream",
+    "slug": "vanimestream",
     "tab": "Dev",
-    "tagline": "🇮🇩 Indonesia Emas 2045 is a collaboration project with my sister",
-    "url": "https://indonesiaemas2045.vercel.app/",
+    "tagline": "VAnime Stream adalah source code website streaming anime. Source code ini menggunakan bahasa pemograman php dan menggunakan Codeigniter3. Source code ini ringan dan bisa di upload di hosting.",
+    "url": "#",
     "category": "web development",
-    "type": "Next JS",
-    "img": "/assets/img/indonesiaemas.png"
-  },
-  {
-    "name": "Xavoslab",
-    "slug": "xavoslab",
-    "tab": "Dev",
-    "tagline": "🎓 Xavoslab is a collaboration project with my sister",
-    "url": "https://xavoslab.vercel.app/",
-    "category": "web development",
-    "type": "Next JS",
-    "img": "/assets/img/xavoslab.png"
-  },
-  {
-    "name": "Emore Notes",
-    "slug": "notes-app",
-    "tagline": "📝 Emore Notes is the best place to jot down quick thoughts.",
-    "url": "http://emorenotes.vercel.app/",
-    "category": "web development",
-    "type": "javascript",
-    "img": "/assets/img/emorenotes.png"
-  },
-  {
-    "name": "Weather App",
-    "slug": "Apweather-react",
-    "tagline": "⛅ A weather forecast checker app for the web",
-    "url": "https://apweather.vercel.app/",
-    "category": "web development",
-    "type": "react js",
-    "img": "/assets/img/dashboard.png"
-  },
-  {
-    "name": "Portofolio V2",
-    "slug": "elvirafimansyah.github.io",
-    "tagline": "⚡️ My personal website built with React.js, Chakra UI, and Vercel.",
-    "url": "https://elvira.vercel.app/",
-    "category": "web development",
-    "type": "react js",
-    "img": "/assets/img/preview.png"
-  },
-  {
-    "name": "Portofolio V3",
-    "slug": "portofolio-v3",
-    "tagline": "⚡️ My personal website v3 built with Next.js, Shadcn UI, and Vercel.",
-    "url": "https://elvira.vercel.app/",
-    "category": "web development",
-    "type": "next js",
-    "img": "/assets/img/previewv3.png"
-  },
-  
-  {
-    "name": "Engxzu",
-    "slug": "Engxzu_",
-    "tagline": "📚 Engxzu is an online learning english application",
-    "url": "https://engxzu.netlify.app/",
-    "category": "web development",
-    "type": "HTML",
-    "img": "/assets/img/engxzu.png"
-  },
-  {
-    "name": "Emore Quiz",
-    "slug": "quiz-app",
-    "tagline": "❓ The quiz game bulit with vannila javascript",
-    "url": "https://quizemore.vercel.app/",
-    "category": "web development",
-    "type": "javascript",
-    "img": "/assets/img/emorequiz.png"
+    "type": "Codeigniter 3",
+    "img": "https://raw.githubusercontent.com/Setiawan007/STREAMNIME/main/preview.png"
   }
 ]
