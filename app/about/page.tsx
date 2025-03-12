@@ -6,10 +6,11 @@ import { FaMessage } from "react-icons/fa6";
 import Link from "next/link";
 import Skills from "./skills";
 import { useEffect } from "react";
+import BlurText from "../components/BlurText/BlurText";
 
 const About = () => {
   useEffect(() => {
-     document.title = "About | Elvira Firmansyah"
+     document.title = "About | Romadhon Aji S"
   }, [])
   return (
     <div className="dark:bg-gradient-to-tr md:h-lvh from-mediumpastel via-viapastel to-pastel">
@@ -21,13 +22,13 @@ const About = () => {
 
               <p className="text-desc text-base xl:text-deskripsi leading-normal font-medium flex space-y-3 flex-col">
                 <span>  
-                  Hello! I am Elvira Firmansyah. I&apos;m from Indonesia. I&apos;m a student. I enjoy learning something new and getting feedback to make myself better and improve.
+                  Hello! I am Romadhon Aji Satrya, an IT professional from Indonesia with expertise in troubleshooting hardware/software, network administration, and IT security. I have experience managing Linux and Windows servers, maintaining CCTV/DVR systems, and optimizing internet infrastructure.
                 </span>
                 <span>
-                  I adore the ideas of what I can build through coding. From that point, I started learning web development tools such as <a href="https://react.dev/" target ="_blank" className="underline decoration-primary decoration-2 underline-offset-[3px] text-foreground">React</a> & <a href="https://tailwindcss.com/" target ="_blank" className="underline decoration-primary decoration-2 underline-offset-[3px] text-foreground">Tailwind</a>
+                  I enjoy solving technical challenges and continuously learning new technologies. My journey in IT led me to explore cybersecurity, server management, and UI/UX design. Currently, I am also expanding my skills in web development, focusing on <Link href="https://nextjs.org/" className="underline decoration-primary decoration-2 underline-offset-[3px] text-foreground">Next.js</Link>, <Link href="https://tailwindcss.com/" className="underline decoration-primary decoration-2 underline-offset-[3px] text-foreground">Tailwind</Link>, and <Link href="https://react.dev/" className="underline decoration-primary decoration-2 underline-offset-[3px] text-foreground">React</Link> to build modern applications.
                 </span>
                 <span>
-                  I am a person who is interested in UI/UX Design and Front-End Development. I am passionate about building a career in UI/UX design & development, to which I would bring dedication, enthusiasm and creativity. I am seeing a part-time position in the industry in which I can put into practice my knowledge and experience.
+                  I am seeking opportunities to apply my expertise in a dynamic environment while growing professionally and contributing to innovative IT solutions.
                 </span>
                 <span>
                 Check out the <Link href="/project" className="underline decoration-primary decoration-2 underline-offset-[3px] text-foreground">projects</Link> page to see a highlight of the open-source projects I&apos;ve made, and <Link href="/blog" className="underline decoration-primary decoration-2 underline-offset-[3px] text-foreground">blog</Link> to see everything I&apos;ve written

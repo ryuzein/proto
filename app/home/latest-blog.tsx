@@ -8,6 +8,8 @@ import { Dot } from 'lucide-react';
 import { Badge } from "@/components/ui/badge";
 import { Skeleton } from "@/components/ui/skeleton";
 import NotFound from "@/components/notfound";
+import TrueFocus from "../components/TrueFocus/TrueFocus";
+import { motion } from "framer-motion";
 interface blogData {
   title: string;
   content: string;
@@ -42,7 +44,7 @@ const LatestBlog = () => {
   }
 
   useEffect(() => {
-    document.title = "Blog | Elvira Firmansyah"
+    document.title = "Blog | Romadhon Aji S"
     const fetchData = async () => {
       try {
         const posts = await getAllPosts();
@@ -63,6 +65,7 @@ const LatestBlog = () => {
   return (
     <Container>
       <div className="pt-3 pb-10">
+
         <h1 className="font-bold text-2xl md:text-3xl  tracking-title">Latest <span className="text-primary">Blog</span> </h1>
         <div className="py-5">
           {loading ? loading_card.map((_, key) => (
@@ -71,8 +74,20 @@ const LatestBlog = () => {
             posts && posts.length > 0 ? (
               <div className="grid grid-cols-1 gap-6">
                 {posts.map((post, key) => (
+                <motion.div
+                    key={key}
+                    initial={{ y: -50, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{ type: "spring", stiffness: 120, damping: 10, delay: key * 0.2 }}
+                   >
                   <div key={key} className="border border-bordersoft bg-background dark:bg-soft flex flex-col md:flex-row md:space-x-5 p-5 md:p-6 rounded-xl relative space-y-4 md:space-y-0  dark:shadow-none">
-                    <div className="space-y-3">
+                    {/* Thumbnail */}
+                    {post.cover && (
+                    <div className="w-full md:w-1/3 flex-shrink-0">
+                      <Image src={post.cover} alt={post.title} width={300} height={200} className="rounded-lg object-cover w-full h-[180px] md:h-[200px]" />
+                    </div>
+                     )}
+                      <div className="space-y-3">
                       <div className="space-y-2">
                         <div className="flex space-x-2">
                           <Badge variant="primary">{post.category}</Badge>
@@ -102,12 +117,14 @@ const LatestBlog = () => {
                       <div className="absolute text-xs md:text-sm right-6 bottom-6 text-desc">{post.estimated}</div>
                     </div>
                   </div>
+                  </motion.div>
                 ))}
               </div>
             ) : (
               <NotFound title="No Posts Found" description="There are no recent blog posts available." size="2xl" size_md="3xl" />
             )}
-        </div>
+         
+         </div>
       </div>
     </Container>
   );

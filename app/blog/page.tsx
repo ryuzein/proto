@@ -10,6 +10,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import NotFound from "@/components/notfound";
 import { Skeleton } from "@/components/ui/skeleton";
+import TrueFocus from "../components/TrueFocus/TrueFocus";
 interface blogData {
   title: string;
   content: string;
@@ -49,7 +50,7 @@ const Blog = () => {
   }
 
   useEffect(() => {
-    document.title = "Blog | Romadhon Aji S"
+    document.title = "Personal Blog | Romadhon Aji S"
     const fetchData = async () => {
       try {
         const posts = await getAllPosts();
@@ -88,61 +89,49 @@ const Blog = () => {
         <section id="blog" className="py-28 overflow-hidden">
           <div className="flex flex-col md:items-center justify-center md:space-y-0">
             <div className="md:w-3/4 lg:w-full space-y-2 text-center">
-              <h1 className="font-bold text-4xl lg:text-title2 tracking-title text-primary">Blog</h1>
+              <TrueFocus sentence="Personal Blog" manualMode={false} blurAmount={5} borderColor="#1584e6" animationDuration={2} pauseBetweenAnimations={1} />
               <p className="text-desc text-lg tracking-desc font-normal pb-3">Some personal opinions on technology and my random thoughts.</p>
               <hr className="bg-[#EEF1F6] border-[0.5] border-[#EEF1F6] dark:border-navdark dark:bg-navdark " />
             </div>
             <form className="flex w-full items-center space-x-3 pl-[1px] pt-4 pb-6" onSubmit={(e) => { e.preventDefault(); filterData() }} >
-              <Input type="text" placeholder="Search..." onChange={(e) => getSearchValue(e.target.value)} />
-              <Button variant="primary" type="submit" onClick={() => filterData()}>Search</Button>
+              <Input type="text" placeholder="Search..." onChange={(e) => setInput(e.target.value)} />
+              <Button variant="primary" type="submit">Search</Button>
             </form>
-            {loading ? loading_card.map((_, key) => (
-              <>
-                <Skeleton key={key} className="border cursor-pointer border-bordersoft bg-soft hover:bg-hoversoft rounded-xl w-full h-[240px]" />
-              </>
-            )) :
-              !posts?.length ? <NotFound
-                title="No Results Found"
-                description="No results match the filter criteria. Remove filter or clear all filters to show results."
-                size="2xl"
-                size_md="3xl"
-              /> :
-                <div className="grid grid-cols-1 gap-6 ">
-                  {
-                    posts?.map((_, key) => (
-                      <div key={key} className="border border-bordersoft dark:bg-soft flex flex-col md:flex-row md:space-x-5 p-5 md:p-6 rounded-xl relative space-y-4 md:space-y-0  dark:shadow-none">
-                        <div className="space-y-3" >
-                          <div className="space-y-2">
-                            <div className="flex space-x-2">
-                              <Badge variant="primary">{_.category}</Badge>
-                              <p className="tracking-desc">{_.createdAt ? convertTanggal(_.createdAt) : ''}</p>
-                            </div>
-
-                            <div className="space-y-1">
-                              <h2 className="text-lg lg:text-xl font-extrabold hover:underline hover:decoration-primary underline-offset-4 line-clamp-2 text-ellipsis "><Link href={`/blog/${_.slug}`}>{_.title}</Link></h2>
-                              <p className="text-desc line-clamp-3 text-ellipsis text-sm lg:text-base ">{_.description}</p>
-                            </div>
-                          </div>
-                          <div >
-                            <div className="flex items-center text-sm md:text-base" >
-                              <div className="flex items-center space-x-3">
-                                <Image
-                                  src={'/assets/img/profile.png'}
-                                  alt={'profile'}
-                                  width={1200}
-                                  height={800}
-                                  className="rounded-full w-9 h-9 object-cover "
-                                />
-                                <p>{_.authorName}</p>
-                              </div>
-                            </div>
-                          </div>
-                          <div className="absolute text-xs md:text-sm right-6 bottom-6 text-desc">{_.estimated}</div>
+            {loading ? <Skeleton className="border cursor-pointer border-bordersoft bg-soft hover:bg-hoversoft rounded-xl w-full h-[240px]" /> :
+              !posts?.length ? <NotFound title="No Results Found" description="No results match the filter criteria." size="2xl" size_md="3xl" /> :
+                <div className="grid grid-cols-1 gap-6">
+                  {posts.map((_, key) => (
+                    <div key={key} className="border border-bordersoft dark:bg-soft flex flex-col md:flex-row md:space-x-5 p-5 md:p-6 rounded-xl relative space-y-4 md:space-y-0 dark:shadow-none">
+                      {/* Thumbnail */}
+                      {_.cover && (
+                        <div className="w-full md:w-1/3 flex-shrink-0">
+                          <Image src={_.cover} alt={_.title} width={300} height={200} className="rounded-lg object-cover w-full h-[180px] md:h-[200px]" />
                         </div>
+                      )}
+                      
+                      {/* Konten */}
+                      <div className="space-y-3 flex flex-col justify-between flex-1">
+                        <div className="space-y-2">
+                          <div className="flex space-x-2">
+                            <Badge variant="primary">{_.category}</Badge>
+                            <p className="tracking-desc">{_.createdAt ? convertTanggal(_.createdAt) : ''}</p>
+                          </div>
+                          <h2 className="text-lg lg:text-xl font-extrabold hover:underline hover:decoration-primary underline-offset-4 line-clamp-2">
+                            <Link href={`/blog/${_.slug}`}>{_.title}</Link>
+                          </h2>
+                          <p className="text-desc line-clamp-3 text-ellipsis text-sm lg:text-base">{_.description}</p>
+                        </div>
+                        {/* Author */}
+                        <div className="flex items-center text-sm md:text-base">
+                          <div className="flex items-center space-x-3">
+                            <Image src={'/assets/img/profile.png'} alt={'profile'} width={1200} height={800} className="rounded-full w-9 h-9 object-cover" />
+                            <p>{_.authorName}</p>
+                          </div>
+                        </div>
+                        <div className="absolute text-xs md:text-sm right-6 bottom-6 text-desc">{_.estimated}</div>
                       </div>
-                    ))
-                  }
-
+                    </div>
+                  ))}
                 </div>
             }
           </div>

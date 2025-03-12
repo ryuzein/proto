@@ -44,9 +44,9 @@ const Skills = () => {
       ],
       code_img: [
         {
-          name: "Kotlin",
-          img: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Kotlin_Icon.png/600px-Kotlin_Icon.png?20210501145042",
-          url: "https://kotlinlang.org/"
+          name: "Go Lang",
+          img: "https://go.dev/images/favicon-gopher.png",
+          url: "https://go.dev/"
         },
         {
           name: "C#",
@@ -70,9 +70,9 @@ const Skills = () => {
       ],
       code_img: [
         {
-          name: "Styled-Components",
-          img: "https://styled-components.com/atom.png",
-          url: "https://styled-components.com/"
+          name: "Laravel Filament",
+          img: "https://filamentphp.com/favicon/apple-touch-icon.png?v=w1dBNxT7Wg",
+          url: "https://filamentphp.com/"
         },
         {
           name: "Chakra-UI",
@@ -106,6 +106,11 @@ const Skills = () => {
       ],
       code_img: [
         {
+          name: "Codeigniter",
+          img: "https://codeigniter.com/favicons/apple-touch-icon.png",
+          url: "https://codeigniter.com/"
+        },
+        {
           name: "Tailwind",
           img: "https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg",
           url: "https://tailwindcss.com/"
@@ -122,6 +127,39 @@ const Skills = () => {
           color: theme == "light" ? "language-github" : "white",
           url: "http://github.com/"
         },
+      ],
+      code_img: [
+        {
+          name: "Figma",
+          img: "https://avatars.githubusercontent.com/u/5155369?s=200&v=4",
+          url: "https://www.figma.com/"
+        },
+        {
+          name: "Postman",
+          img: "https://camo.githubusercontent.com/5c2595c2fcc9ef7ffa97d14f868547d945d5cee65045377c7c34611b5a67c139/68747470733a2f2f7777772e766563746f726c6f676f2e7a6f6e652f6c6f676f732f676574706f73746d616e2f676574706f73746d616e2d69636f6e2e737667",
+          url: "https://postman.com/"
+        },
+        {
+          name: "Canva",
+          img: "https://public.canva.site/logo/media/dfb96cc174513093cd6ed61489ccb750.svg",
+          url: "https://canva.com/"
+        },
+        {
+          name: "Photoshop CS6",
+          img: "https://upload.wikimedia.org/wikipedia/commons/b/be/Adobe_Photoshop_CS6_icon.png",
+          url: "https://postman.com/"
+        },
+        {
+          name: "VSCode",
+          img: "https://upload.wikimedia.org/wikipedia/commons/9/9a/Visual_Studio_Code_1.35_icon.svg",
+          url: "https://code.visualstudio.com/"
+        }
+      ]
+    },
+    {
+      id: 5,
+      name: "IT Networking",
+      code: [
         {
           name: "Git",
           icon: <i className="fa-brands fa-git-alt"></i>,
@@ -131,36 +169,76 @@ const Skills = () => {
       ],
       code_img: [
         {
-          name: "Figma",
-          img: "https://avatars.githubusercontent.com/u/5155369?s=200&v=4",
-          url: "https://www.figma.com/"
+          name: "Linux",
+          img: "https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg",
+          url: "#"
         },
         {
-          name: "VSCode",
-          img: "https://upload.wikimedia.org/wikipedia/commons/9/9a/Visual_Studio_Code_1.35_icon.svg",
-          url: "https://code.visualstudio.com/"
+          name: "Windows Server",
+          img: "https://www.cdnlogo.com/logos/w/40/windows-server-2.svg",
+          url: "#"
+        },
+        {
+          name: "DVR/NVR",
+          img: "https://www.distributor-cctv.com/blog/wp-content/uploads/2025/02/cara-backup-rekaman-dvr-cctv-ke-hard-drive.png",
+          url: "#"
+        },
+        {
+          name: "SQL Yog",
+          img: "https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg",
+          url: "#"
         }
       ]
     },
   ]
   const workExperiences = [
     {
-      title: "IT Infrastructure Engineer",
-      corp: "Google",
-      year: "2022 - Present",
-      description: "Responsible for managing and maintaining IT infrastructure, ensuring system stability, and implementing security measures.",
-      companyLogo: "https://cdn1.iconfinder.com/data/icons/google-s-logo/150/Google_Icons-09-512.png",
-      companyName: "Google"
+      title: "Network Engineer",
+      corp: "PT. Lintas Data Prima",
+      year: "Nov 2019 - Apr 2020",
+      description: "I was responsible for installing and configuring MikroTik antennas to optimize network coverage, monitoring internet activity to ensure stable connections, and maintaining WiFi networks and fiber optic cables. I also assisted in managing the Network Operation Center, troubleshooting network issues, and ensuring smooth data traffic for clients.",
+      companyLogo: "/assets/img/ldp.png",
+      companyName: "PT. Lintas Data Prima"
     },
     {
-      title: "Network Engineer",
-      corp: "Google",
-      year: "2020 - 2022",
-      description: "Designed, implemented, and maintained network solutions to ensure connectivity and security across various platforms.",
+      title: "IT Support",
+      corp: "Inul Vizta Family KTV",
+      year: "Jul 2022 - Feb 2023",
+      description: "I handled troubleshooting for hardware, software, and electrical systems, ensuring smooth IT operations. I maintained and monitored the network infrastructure, configured access points, and provided maintenance for CCTV DVR/NVR systems to enhance security. Additionally, I supported the company’s branding efforts by applying my graphic design skills and helped maintain a seamless entertainment experience for customers.",
+      companyLogo: "https://images.crunchbase.com/image/upload/c_pad,h_256,w_256,f_auto,q_auto:eco,dpr_1/ca6khrwp649w1h9wugpv",
+      companyName: "Inul Vizta Family KTV"
+    },
+    {
+      title: "IT Support and System Specialist",
+      corp: "PT. Grand Pasific Pratama",
+      year: "Mar 2023 - Present",
+      description: "I managed the company's IT infrastructure, including network security, system administration, and troubleshooting. I installed and maintained CCTV, NVR, and DVR systems, ensuring reliable security monitoring. I was also responsible for administering and optimizing Linux and Windows servers, implementing cybersecurity measures to protect company data, and providing IT solutions to enhance operational efficiency and business continuity.",
       companyLogo: "/assets/img/pt2.png",
-      companyName: "Net Solutions"
+      companyName: "PT. Grand Pasific Pratama"
     }
   ]
+
+  const educationExperiences = [
+    {
+      degree: "SMK Negeri 5 Madiun",
+      institution: "Computer Engineering and Networking",
+      year: "2018 - 2021",
+      description: "I studied Computer Engineering and Networking at SMKN 5 Madiun, where I gained knowledge in network installation, configuration, and maintenance. My coursework covered LAN and WAN setup, server administration using Linux and Windows, and network security, including firewalls and troubleshooting techniques. Additionally, I developed hands-on experience in configuring network infrastructure and optimizing connectivity solutions."
+    },
+    {
+      degree: "PT. Lintas Data Prima",
+      institution: "Network Engineer & Network Operation Center",
+      year: "2019 - 2020",
+      description: "During my six-month internship at Lintas Data Prima, I worked as a Network Engineer and Network Operation Center (NOC) technician, handling network monitoring, troubleshooting, and maintenance. I was responsible for configuring routers and switches (Cisco/MikroTik), diagnosing network issues, and ensuring stable connectivity for clients. This experience enhanced my problem-solving skills, technical expertise, and ability to manage real-world networking challenges efficiently."
+    },
+    {
+      degree: "Cisco Networking Academy",
+      institution: "Online Course - CISCO",
+      year: "2020",
+      description: "The Cisco Introduction to Cybersecurity course covers global cyber threats, network vulnerabilities, and industry impacts. It introduces Cisco’s security approach, career opportunities, and certification paths, providing essential cybersecurity awareness."
+    }
+  ];
+  
 
   // Animation variants for section headers
   const headerVariants: Variants = {
@@ -387,6 +465,33 @@ const Skills = () => {
           </div>
         </motion.div>
       ))}
+      <div>
+      <motion.h1 
+        className="font-bold text-3xl xl:text-[1.7rem] tracking-title text-primary mt-8"
+        variants={headerVariants}
+        initial="hidden"
+        animate="visible"
+        transition={{ delay: 1.5 }}
+      >
+        Education
+      </motion.h1>
+      
+      {educationExperiences.map((edu, index) => (
+        <motion.div 
+          key={index} 
+          className="bg-background dark:bg-soft border border-border p-6 rounded-lg shadow-md mt-4"
+          custom={index}
+          variants={workExpVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          <h3 className="text-xl font-semibold">{edu.degree}</h3>
+          <h4 className="text-l font-semibold">{edu.institution}</h4>
+          <p className="text-gray-400">{edu.year}</p>
+          <p className="text-gray-300 mt-2">{edu.description}</p>
+        </motion.div>
+      ))}
+    </div>
     </div>
   );
 }
