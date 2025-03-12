@@ -202,12 +202,14 @@ const Skills = () => {
     },
     {
       title: "IT Support",
-      corp: "Inul Vizta Family KTV",
+      corp: "Lippo Plaza Sidoarjo",
       year: "Jul 2022 - Feb 2023",
       description: "I handled troubleshooting for hardware, software, and electrical systems, ensuring smooth IT operations. I maintained and monitored the network infrastructure, configured access points, and provided maintenance for CCTV DVR/NVR systems to enhance security. Additionally, I supported the company’s branding efforts by applying my graphic design skills and helped maintain a seamless entertainment experience for customers.",
-      companyLogo: "https://images.crunchbase.com/image/upload/c_pad,h_256,w_256,f_auto,q_auto:eco,dpr_1/ca6khrwp649w1h9wugpv",
-      companyName: "Inul Vizta Family KTV"
+      companyLogo: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/800px-Google_%22G%22_logo.svg.png",
+      companyName: "Lippo Plaza Sidoarjo"
     },
+    // https://images.crunchbase.com/image/upload/c_pad,h_256,w_256,f_auto,q_auto:eco,dpr_1/ca6khrwp649w1h9wugpv
+    
     {
       title: "IT Support and System Specialist",
       corp: "PT. Grand Pasific Pratama",
